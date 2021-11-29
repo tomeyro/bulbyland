@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/scenes/AudioManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/level1-step2.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/music/level1-step3-evil.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/music/level1-step3.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/music/level1-step1-evil.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/music/level1-step1.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/music/level1-step2-evil.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sfx/block.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sfx/light.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/sfx/switch.wav" type="AudioStream" id=10]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource( 1 )
+volume = -12.0
+volume_sfx = -20.0
+pitch_scale_max = 1.0
+
+[node name="Music" type="Node" parent="."]
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 6 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 2 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 4 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 5 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 7 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 3 )
+
+[node name="Sfx" type="Node" parent="."]
+
+[node name="Light" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 9 )
+
+[node name="Block" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 8 )
+
+[node name="Switch" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource( 10 )

@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/levels/LevelCompletedUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/btn_play.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/btn_play_sm.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/btn_play_big.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/btn_home_sm.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/btn_home.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/btn_home_big.png" type="Texture" id=7]
+[ext_resource path="res://src/scripts/StretchableUI.gd" type="Script" id=8]
+[ext_resource path="res://src/scripts/ResizableUI.gd" type="Script" id=9]
+[ext_resource path="res://assets/images/btn_retry_big.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/btn_retry_sm.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/btn_retry.png" type="Texture" id=12]
+
+[node name="LevelCompletedUI" type="Control"]
+margin_right = 1025.0
+margin_bottom = 597.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_left = -536.0
+margin_top = -438.0
+margin_right = 1616.0
+margin_bottom = 1181.0
+color = Color( 0.117647, 0.117647, 0.117647, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="NextLevelButton" type="TextureButton" parent="Buttons"]
+margin_left = 375.0
+margin_top = 200.0
+margin_right = 733.0
+margin_bottom = 558.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" type="TextureButton" parent="Buttons"]
+margin_left = 375.0
+margin_top = 200.0
+margin_right = 733.0
+margin_bottom = 558.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleScreenButton" type="TextureButton" parent="Buttons"]
+margin_left = 555.0
+margin_top = 200.0
+margin_right = 913.0
+margin_bottom = 558.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Buttons/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+[connection signal="pressed" from="Buttons/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="Buttons/TitleScreenButton" to="." method="_on_TitleScreenButton_pressed"]

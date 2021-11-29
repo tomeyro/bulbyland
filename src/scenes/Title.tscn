@@ -1,0 +1,220 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://src/scenes/Title.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/bulby_green.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/bulby_cyan.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/bulby_yellow.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/bulby_pink.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/bulbyland_pink.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/bulbyland_cyan.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/bulbyland_yellow.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/bulbyland_green.png" type="Texture" id=9]
+[ext_resource path="res://src/prefabs/BulbyButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/images/btn_question_sm.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/btn_question.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/btn_question_big.png" type="Texture" id=13]
+[ext_resource path="res://src/scripts/ResizableUI.gd" type="Script" id=14]
+[ext_resource path="res://src/scripts/StretchableUI.gd" type="Script" id=15]
+[ext_resource path="res://assets/images/btn_home_big.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/btn_home_sm.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/btn_home.png" type="Texture" id=18]
+[ext_resource path="res://assets/Sniglet-Regular.ttf" type="DynamicFontData" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 19 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Title" type="Control"]
+theme = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_left = -95.0
+margin_top = -83.0
+margin_right = 928.0
+margin_bottom = 517.0
+rect_scale = Vector2( 1.19017, 1.28533 )
+color = Color( 0.313726, 0.282353, 0.596078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI" type="Control" parent="."]
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Timer" type="Timer" parent="UI"]
+wait_time = 0.55
+autostart = true
+
+[node name="Bulby" type="Control" parent="UI"]
+margin_left = 237.0
+margin_top = 223.0
+margin_right = 237.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BulbyCyan" type="Sprite" parent="UI/Bulby"]
+texture = ExtResource( 3 )
+
+[node name="BulbyGreen" type="Sprite" parent="UI/Bulby"]
+texture = ExtResource( 2 )
+
+[node name="BulbyPink" type="Sprite" parent="UI/Bulby"]
+texture = ExtResource( 5 )
+
+[node name="BulbyYellow" type="Sprite" parent="UI/Bulby"]
+texture = ExtResource( 4 )
+
+[node name="Bulbyland" type="Control" parent="UI"]
+margin_left = 242.0
+margin_top = 423.0
+margin_right = 242.0
+margin_bottom = 423.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BulbylandCyan" type="Sprite" parent="UI/Bulbyland"]
+texture = ExtResource( 7 )
+
+[node name="BulbylandGreen" type="Sprite" parent="UI/Bulbyland"]
+texture = ExtResource( 9 )
+
+[node name="BulbylandPink" type="Sprite" parent="UI/Bulbyland"]
+texture = ExtResource( 6 )
+
+[node name="BulbylandYellow" type="Sprite" parent="UI/Bulbyland"]
+texture = ExtResource( 8 )
+
+[node name="Buttons" type="Control" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BulbyButton" parent="UI/Buttons" instance=ExtResource( 10 )]
+margin_left = 890.0
+margin_top = 262.0
+margin_right = 890.0
+margin_bottom = 262.0
+
+[node name="InfoButton" type="TextureButton" parent="UI"]
+margin_left = 13.0
+margin_top = 498.0
+margin_right = 371.0
+margin_bottom = 856.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Control" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="UI/Info"]
+margin_left = 381.0
+margin_top = 3.0
+margin_right = 1012.0
+margin_bottom = 594.0
+color = Color( 0.313726, 0.282353, 0.596078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseInfoButton" type="TextureButton" parent="UI/Info"]
+margin_left = 13.0
+margin_top = 498.0
+margin_right = 371.0
+margin_bottom = 856.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="UI/Info"]
+margin_left = 487.0
+margin_top = 67.0
+margin_right = 895.0
+margin_bottom = 586.0
+bbcode_enabled = true
+bbcode_text = "[center]
+Controls: Move with WASD or Arrow Keys
+
+===========================
+
+Game by @tomeyro ([url=https://twitter.com/tomeyro]twitter[/url] + [url=https://tomeyro.itch.io]itch.io[/url] + [url=https://gotm.io/tomeyro]gotm.io[/url])
+
+Made for the \"Go Godot Jam\" 
+with the theme: \"Energy Source\"
+
+Font \"Sniglet\" by Haley Fiege
+from [url=https://fonts.google.com/specimen/Sniglet]fonts.google.com[/url]
+(Open Font License)
+
+Music by Oddroom
+from [url=https://opengameart.org/content/music-loop-variations]opengameart.org[/url]
+(CC0)
+[/center]"
+text = "
+Controls: Move with WASD or Arrow Keys
+
+===========================
+
+Game by @tomeyro (twitter + itch.io + gotm.io)
+
+Made for the \"Go Godot Jam\" 
+with the theme: \"Energy Source\"
+
+Font \"Sniglet\" by Haley Fiege
+from fonts.google.com
+(Open Font License)
+
+Music by Oddroom
+from opengameart.org
+(CC0)
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="UI/Timer" to="." method="_on_ImagesTimer_timeout"]
+[connection signal="pressed" from="UI/InfoButton" to="." method="_on_InfoButton_pressed"]
+[connection signal="pressed" from="UI/Info/CloseInfoButton" to="." method="_on_CloseInfoButton_pressed"]
+[connection signal="meta_clicked" from="UI/Info/Label" to="." method="_on_links_clicked"]
