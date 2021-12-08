@@ -1,2 +1,5 @@
 builds/*
 .import/*
+android/*
+*.keystore
+export_presets.cfg
