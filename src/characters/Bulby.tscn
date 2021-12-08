@@ -58,4 +58,9 @@ monitorable = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.49482, 0 )
 shape = SubResource( 4 )
 
+[node name="WalkingCooldown" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
 [connection signal="area_entered" from="LightDetector" to="." method="_on_LightDetector_area_entered"]
+[connection signal="timeout" from="WalkingCooldown" to="." method="_on_WalkingCooldown_timeout"]

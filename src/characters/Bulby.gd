@@ -16,10 +16,12 @@ var target: Vector3
 var rotator: Spatial
 var shader: ShaderMaterial = preload("res://src/characters/BulbyShader.tres")
 var dancing: bool = false
+var can_walk: bool = true
 
 
 onready var animation_player: AnimationPlayer = $Bulby/AnimationPlayer
 onready var block_detector: RayCast = $BlockDetector
+onready var walking_cooldown: Timer = $WalkingCooldown
 
 
 func _ready() -> void:
@@ -42,13 +44,13 @@ func _ready() -> void:
 
 
 func _get_movement() -> Vector3:
-    if Input.is_action_just_pressed("move_up"):
+    if Input.is_action_pressed("move_up"):
         return Vector3(0, 0, 1)
-    if Input.is_action_just_pressed("move_down"):
+    if Input.is_action_pressed("move_down"):
         return Vector3(0, 0, -1)
-    if Input.is_action_just_pressed("move_left"):
+    if Input.is_action_pressed("move_left"):
         return Vector3(1, 0, 0)
-    if Input.is_action_just_pressed("move_right"):
+    if Input.is_action_pressed("move_right"):
         return Vector3(-1, 0, 0)
     return Vector3.ZERO
 
@@ -65,7 +67,7 @@ func _update_color(delta: float) -> void:
 func _process(delta: float) -> void:
     _update_color(delta)
 
-    if target == global_transform.origin and not dancing:
+    if can_walk and target == global_transform.origin and not dancing:
         var movement = _get_movement()
         if movement != Vector3.ZERO:
             var block_detector_y = block_detector.global_transform.origin.y
@@ -85,6 +87,8 @@ func _process(delta: float) -> void:
                     rotator.global_transform.origin = global_transform.origin
                     rotator.look_at(target, Vector3.UP)
 
+                    can_walk = false
+
     if target != global_transform.origin:
         animation_player.play("Walk", -1, 2)
 
@@ -98,6 +102,8 @@ func _process(delta: float) -> void:
 
         else:
             animation_player.play("Idle", -1, 1.2)
+            if not can_walk and walking_cooldown.is_stopped():
+                walking_cooldown.start()
 
 
 func _on_LightDetector_area_entered(area: Area) -> void:
@@ -117,3 +123,7 @@ func on_level_completed(_level) -> void:
 
 func on_level_failed(_level) -> void:
     dancing = true
+
+
+func _on_WalkingCooldown_timeout() -> void:
+    can_walk = true
