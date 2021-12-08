@@ -49,9 +49,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="671.04266"
-     inkscape:cy="-135.1017"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="237.21837"
+     inkscape:cy="378.91651"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1505,8 +1505,9 @@
     <g
        id="g1247"
        inkscape:export-filename="/data/dev/Godot/GoGodotJamEnergySource/icon.png"
-       inkscape:export-xdpi="38.372158"
-       inkscape:export-ydpi="38.372158">
+       inkscape:export-xdpi="307.22449"
+       inkscape:export-ydpi="307.22449"
+       transform="matrix(1.2136563,0,0,1,-46.03688,0)">
       <rect
          ry="1.0000006"
          rx="1.0000006"
@@ -3120,6 +3121,69 @@
            y="62.039444"
            x="47.630775"
            sodipodi:role="line">LAND</tspan></text>
+    </g>
+    <g
+       inkscape:export-ydpi="300.18814"
+       inkscape:export-xdpi="300.18814"
+       inkscape:export-filename="/data/dev/Godot/GoGodotJamEnergySource/assets/images/btn_arrow.png"
+       transform="translate(1.058334,76.199999)"
+       id="g1390">
+      <g
+         id="g1398">
+        <rect
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5.29166651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect1380"
+           width="25"
+           height="25"
+           x="114.59462"
+           y="179.24178"
+           rx="1.0000006"
+           ry="1.0000006" />
+        <rect
+           ry="1.0000006"
+           rx="1.0000006"
+           y="179.24178"
+           x="114.59462"
+           height="25"
+           width="25"
+           id="rect1382"
+           style="opacity:1;fill:none;fill-opacity:1;stroke:#1e1e1e;stroke-width:4.23333311;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:5.29166651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect1384"
+           width="25"
+           height="25"
+           x="114.59462"
+           y="179.24178"
+           rx="1.0000006"
+           ry="1.0000006" />
+        <rect
+           ry="1.0000006"
+           rx="1.0000006"
+           y="179.24178"
+           x="114.59462"
+           height="25"
+           width="25"
+           id="rect1386"
+           style="opacity:1;fill:#868686;fill-opacity:1;stroke:none;stroke-width:5.29166651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill" />
+        <path
+           inkscape:transform-center-y="0.030821806"
+           inkscape:transform-center-x="-1.8998133"
+           d="m 133.95918,191.6493 -11.50567,6.7661 -0.10677,-13.34725 z"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="1.0391977"
+           sodipodi:arg1="-0.0079998293"
+           sodipodi:r2="3.8531423"
+           sodipodi:r1="7.7062845"
+           sodipodi:cy="191.71095"
+           sodipodi:cx="126.25314"
+           sodipodi:sides="3"
+           id="path1388"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+           sodipodi:type="star" />
+      </g>
     </g>
   </g>
 </svg>

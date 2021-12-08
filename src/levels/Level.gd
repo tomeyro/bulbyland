@@ -10,9 +10,9 @@ var blocks_on: int = 0 setget set_blocks_on
 var completed: bool = false
 
 
-onready var retry_btn: TextureButton = $UI/RetryButton
-onready var title_btn: TextureButton = $UI/TitleButton
-onready var empty_bar: Sprite = $UI/Battery/BatteryEmptyBar
+onready var retry_btn: TextureButton = $UI/Common/RetryButton
+onready var title_btn: TextureButton = $UI/Common/TitleButton
+onready var empty_bar: Sprite = $UI/Common/Battery/BatteryEmptyBar
 
 
 func _ready() -> void:
