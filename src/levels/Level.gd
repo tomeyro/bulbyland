@@ -58,7 +58,6 @@ func set_blocks_on(_blocks_on) -> void:
         timer.connect("timeout", self, "check_for_win")
 
 
-
 func on_retry() -> void:
     # warning-ignore:return_value_discarded
     get_tree().change_scene("res://src/levels/Level" + str(level) + ".tscn")

@@ -299,7 +299,7 @@ skeleton = NodePath("../..")
 [node name="Block11" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -8 )
 mesh = SubResource( 24 )
-required_color = 4
+required_color = 2
 
 [node name="Block12" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -8 )
@@ -361,6 +361,7 @@ mesh = SubResource( 52 )
 
 [node name="Light" parent="World" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 4 )
+color = 2
 
 [node name="Light2" parent="World" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -4 )
