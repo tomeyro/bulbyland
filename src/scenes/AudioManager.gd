@@ -45,7 +45,6 @@ func on_track_finished() -> void:
 func set_current_track(new_track) -> void:
     current_track = new_track
     update_volume()
-    update_pitch()
     current_track.play()
 
 
@@ -78,7 +77,6 @@ func update_pitch() -> void:
 
 func on_level_started(level) -> void:
     current_pitch = level.level
-    update_pitch()
 
 
 func set_volume_sfx(new_volume) -> void:
